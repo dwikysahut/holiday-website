@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* styles/globals.css or styles/index.css */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: black;
+  background: white;
+  overflow-x: hidden;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.grid-container {
+  display: grid;
+  height: 600px;
+  gap: 1rem;
+  width: 100%;
+  grid-template-areas:
+    "larger larger larger top-left top-left top-right"
+    "larger larger larger middle-left middle-right middle-right"
+    "larger larger larger bottom bottom bottom";
+}
+.grid-container > *:hover {
+  /* transform: scale(1.05); */
+  transition: all ease-in 0.3s;
+  z-index: 99;
+}
+.grid-container > * {
+  border-radius: 20px;
+}
+
+.grid-item__larger {
+  grid-area: larger;
+}
+.grid-item__top-left {
+  grid-area: top-left;
+}
+.grid-item__top-right {
+  grid-area: top-right;
+}
+.grid-item__middle-left {
+  grid-area: middle-left;
+}
+.grid-item__middle-right {
+  grid-area: middle-right;
+}
+.grid-item__bottom {
+  grid-area: bottom;
+}

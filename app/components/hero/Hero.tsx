@@ -102,9 +102,29 @@ export default function Hero() {
                   variant="standard"
                 />
 
-                <button className=" px-4  py-2 bg-transparent border border-white rounded-lg text-white-500 hover:bg-white hover:text-gray-600 transition-all duration-300 flex gap-2 justify-between items-center">
-                  <div className="flex justify-between items-stretch gap-2">
+                <button className=" px-4  py-2 bg-transparent border  transition-all duration-300 flex gap-2 justify-between items-center rounded">
+                  <div className="flex justify-between items-center gap-2 overflow-hidden rounded w-5 hover:w-48 transition-all duration-500 ease-in-out">
                     <Search />
+                    <TextField
+                      id="standard-basic"
+                      variant="standard"
+                      sx={{
+                        "& .MuiInputBase-root": {
+                          padding: 0, // Adjust padding as needed
+                          margin: 0, // Adjust padding as needed
+                          color: "white", // Change the input text color
+                        },
+                        "& .MuiInput-underline:before": {
+                          borderBottomColor: "gold", // Default color
+                        },
+                        "& .MuiInput-underline:hover:not(.Mui-disabled):before": {
+                          borderBottomColor: "white", // Hover color
+                        },
+                        "& .MuiInput-underline:after": {
+                          borderBottomColor: "white", // Color when focused (clicked)
+                        },
+                      }}
+                    />
                   </div>
                 </button>
               </Box>

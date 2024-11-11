@@ -22,7 +22,7 @@ export default function CarouselCard() {
   );
 }
 
-function Item({ item }) {
+function Item({ item }: { item: any }) {
   return (
     <Paper className="w-full h-[300px]">
       <Box className="w-full">
